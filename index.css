@@ -1,0 +1,286 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#watchlist-body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    background-color: black;
+}
+
+
+#watchlist-hero{
+    background-image: url('https://wallpapercave.com/wp/wp12544637.jpg');
+    display: flex;
+    width: 100%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: left;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#hero{
+    height: 30%;
+    width: 100%;
+    background-image: url("https://wallpapercave.com/wp/wp12544637.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+#input-fields {
+    border-radius: 5px;
+    display: flex;
+    justify-self: center;
+    width: 90%;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-top: -2.5%;
+    box-sizing: border-box;
+}
+
+#search-field {
+    width: 100%;
+    height: 50%;
+    background-color: #2b2b2b;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    font-size: large;
+    padding-left: 40px; /* Adds space for the icon */
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#search-btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 30%;
+    vertical-align: top;
+    font-size: larger;
+    color: white;
+    background-color: #4B4B4B;
+}
+
+button:hover {
+    cursor: pointer;
+}
+#search-btn, #search-field{
+    height: 100%;
+    z-index: 1;
+    border: none;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+#hero::before, #watchlist-hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay at 50% opacity */
+    z-index: 0; /* Ensures it is below the text */
+}
+
+#intro{
+    margin-right: 60%;
+    margin-top: 5%;
+    align-self: left;
+    position: relative;/* position: relative; Keeps text above the overlay */
+    color: white;
+    z-index: 1; /* Ensures text appears above the overlay */
+    font-size:xx-large;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+    line-height: 1.5; /* Adjust spacing for readability */
+}
+#my-watchlist{
+    font-size: xx-large;
+    align-self: center;
+    margin-left:10%;
+    color: white;
+    position: absolute;
+}
+
+#to-watchlist{
+    position: absolute;
+    color: white;
+    font-size: medium;
+    margin-top: 6%;
+    margin-left: 50%;
+
+}
+
+#back-to-search{
+    margin-left: 80%;
+    font-size: medium;
+    align-self: center;
+    color: white;
+    position: absolute;
+}
+#back-to-search{
+    cursor: pointer;
+}
+
+
+
+#movie-placeholder{
+    padding-top: 20px;
+    color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: fit-content;
+    border-bottom: #4B4B4B 2px solid;
+    justify-self: center;
+    margin-top: 5%;
+    /* background-color: green; */
+}
+
+#watchlist-placeholder{
+    padding-top: 20px;
+    color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 50%;
+    border-bottom: #4B4B4B 2px solid;
+    justify-self: center;
+    margin-top: 5%;
+    border: red 2px dashed;
+    align-items: center;
+    background-color: green;
+}
+
+#watchlist-poster{
+    border: dashed 2px red;
+    width: 20%;
+    height: 90%;
+    margin-left: 2%;
+}
+
+
+#poster{
+    margin: 10x;
+    margin-right: 30px;
+    margin-left: 5%;
+    width: 15%;
+    height: 90%;
+}
+
+#poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#details{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    margin-top: 3%;
+    margin-right: 0.5%;
+}
+
+#watchlist-details{
+    width: 70%;
+    height: 80%;
+    border: 2px red dashed;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+
+.add{
+    color: black;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    border-radius: 100%;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+#text-group-one, #text-group-two{
+    display: flex;
+    flex-direction: row;
+    border-width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+#text-group-one{
+    margin-top: -50px;
+}
+
+#watchlist{
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 10px;
+}
+#star, #rating{
+    align-self: center;
+}
+#description{
+    padding: 20px;
+    color: grey;
+}
+#input-container{
+    height: 100%;
+    z-index: 2;
+    width: 70%;
+}
+#not-found{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.movie-card{
+    display: flex;
+}
+
