@@ -1,6 +1,12 @@
 // when the page loads, get the movies from localStorage and add to the watchlist variable, then render the watchlist
 window.onload = function () {
-    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    let watchlist;
+    try {
+        watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    } catch (e) {
+        watchlist = [];
+        console.error("Error parsing watchlist");
+    }
     renderWatchlist(watchlist);
 };
 
