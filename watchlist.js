@@ -19,7 +19,7 @@ function renderWatchlist(watchlist) {
         return;
     } else {
         // if there is something in the watchlist, map over the watchlist array and render it
-        let html = watchlist.map((movie) => `<div><h1>${movie.title}</h1><img src="${movie.poster}" alt=""></div> `).join("");
+        let html = watchlist.map((movie) => `<div><h1>${movie.title}</h1><img src="${movie.poster}" alt="${movie.title}"></div> `).join("");
         watchlistPlaceholder.innerHTML = html;
     }
 }
