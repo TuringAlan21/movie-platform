@@ -19,9 +19,10 @@ function renderWatchlist(watchlist) {
         return;
     } else {
         // if there is something in the watchlist, map over the watchlist array and render it
-        let html = watchlist.map((movie) => `
+        let html = watchlist.map((movie) =>  `
+        <div class="movie-box">
         <img src="${movie.poster}" alt="${movie.title}">
-        <h1>${movie.title}</h1>
+        <h2>${movie.title}</h2>
         </div>
         `).join("");
         watchlistPlaceholder.innerHTML = html;
@@ -29,3 +30,8 @@ function renderWatchlist(watchlist) {
 }
 
 // add removal func
+
+const removeBtn = document.querySelector('.remove');
+removeBtn.addEventListener('click', function(){
+    
+})

@@ -21,6 +21,7 @@ searchBtn.addEventListener("click", function () {
                 moviePlaceHolder.innerHTML = "";
 
                 if (data.Response === "True") {
+                    console.log(data);
                     // Iterate through the results and display each movie
                     data.Search.forEach((movie) => {
                         fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=1aa511d0`) // Fetch full movie details
@@ -77,7 +78,7 @@ moviePlaceHolder.addEventListener("click", function (event) {
 
         if (event.target.textContent === "+") {
             if (movieIndex === -1) {
-                watchlist.push({ title: movieTitle, poster: moviePoster });
+                watchlist.unshift({ title: movieTitle, poster: moviePoster });
                 console.log(`Adding "${movieTitle}" to the watchlist.`);
             }
             event.target.textContent = "-";
