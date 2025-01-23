@@ -27,6 +27,7 @@ body {
     background-size: cover;
     color: white;
     text-align: left;
+    position: fixed;
 }
 
 .container {
@@ -167,18 +168,19 @@ button:hover {
 }
 
 #watchlist-placeholder {
+    /* position: relative; */
     padding-top: 20px;
     color: grey;
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 50%;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
     border-bottom: #4b4b4b 2px solid;
     justify-self: center;
-    margin-top: 5%;
+    margin-top: 15%;
     border: red 2px dashed;
     align-items: center;
-    background-color: green;
+
 }
 
 #watchlist-poster {
@@ -194,6 +196,9 @@ button:hover {
     margin-left: 5%;
     width: 15%;
     height: 90%;
+}
+.watchlisted-box{
+    display: flex;
 }
 
 #poster img {

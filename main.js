@@ -99,6 +99,7 @@ moviePlaceHolder.addEventListener("click", function (event) {
                     <div class="movie-card">
                         <img src="${movie.poster}" alt="${movie.title}" />
                         <h3>${movie.title}</h3>
+                        <div class="details"></div>
                     </div>
                 `;
                 watchlistPlaceholder.innerHTML += movieCard;
