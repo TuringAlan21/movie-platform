@@ -21,8 +21,21 @@ function renderWatchlist(watchlist) {
         // if there is something in the watchlist, map over the watchlist array and render it
         let html = watchlist.map((movie) =>  `
         <div class="movie-box">
-        <img src="${movie.poster}" alt="${movie.title}">
-        <h2>${movie.title}</h2>
+        <img src="${movie.poster || 'No poster available'}" alt="${movie.title}">
+        <div class="movie-details">
+        <div class="first-group">
+        <h2 class="watchlist-title">${movie.title || 'No title available'}</h2>
+        <p class="rating">${movie.rating || 'No rating available'}</p>
+        <p class="star">⭐</p>
+        <p class="watchlist-watchlist">Watchlist</p>
+        <button class="remove">-</button>
+        </div>
+        <div class="other-details">
+        <p class="duration">${movie.duration || 'No duration available' }</p>
+        <p class="genre">${movie.genre || 'No genre available'}</p>
+        </div>
+        <p class="plot">${movie.plot || 'No description available'}</p>
+        </div>
         </div>
         `).join("");
         watchlistPlaceholder.innerHTML = html;
@@ -30,8 +43,15 @@ function renderWatchlist(watchlist) {
 }
 
 // add removal func
+document.addEventListener('click', function(event){
+    if(event.target.classList.contains('remove')){
+        const movieBox = event.target.closest('.movie-box');
+        const movieTitle = movieBox.querySelector('.watchlist-title').textContent;
+        movieBox.remove();
 
-const removeBtn = document.querySelector('.remove');
-removeBtn.addEventListener('click', function(){
-    
+
+        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        watchlist = watchlist.filter((movie) => movie.title !== movieTitle);
+        localStorage.setItem("watchlist", JSON.stringify(watchlist));
+    }
 })

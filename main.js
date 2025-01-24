@@ -71,6 +71,10 @@ moviePlaceHolder.addEventListener("click", function (event) {
         const movieCard = event.target.closest(".movie-card");
         const movieTitle = movieCard.querySelector(".movie-title").textContent;
         const moviePoster = movieCard.querySelector("img").src;
+        const movieRating = movieCard.querySelector("#rating").textContent;
+        const movieGenre = movieCard.querySelector("#genre").textContent;
+        const movieDuration = movieCard.querySelector("#duration").textContent;
+        const moviePlot = movieCard.querySelector("#description").textContent;
 
         let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
@@ -78,7 +82,14 @@ moviePlaceHolder.addEventListener("click", function (event) {
 
         if (event.target.textContent === "+") {
             if (movieIndex === -1) {
-                watchlist.unshift({ title: movieTitle, poster: moviePoster });
+                watchlist.unshift({ 
+                    title: movieTitle, 
+                    poster: moviePoster,  
+                    rating: movieRating,
+                    genre: movieGenre,
+                    duration: movieDuration,
+                    plot: moviePlot
+                });
                 console.log(`Adding "${movieTitle}" to the watchlist.`);
             }
             event.target.textContent = "-";
