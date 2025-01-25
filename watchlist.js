@@ -34,7 +34,9 @@ function renderWatchlist(watchlist) {
         <p class="duration">${movie.duration || 'No duration available' }</p>
         <p class="genre">${movie.genre || 'No genre available'}</p>
         </div>
+        <div class="plot-div">
         <p class="plot">${movie.plot || 'No description available'}</p>
+        </div>
         </div>
         </div>
         `).join("");

@@ -20,7 +20,7 @@ body {
 #watchlist-hero {
     background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 30%;
     background-repeat: no-repeat;
     background-position: center;
@@ -155,6 +155,7 @@ button:hover {
 }
 
 #movie-placeholder {
+    display: flex;
     padding-top: 20px;
     color: grey;
     display: flex;
@@ -163,16 +164,16 @@ button:hover {
     height: fit-content;
     justify-self: center;
     margin-top: 5%;
+    margin-right: 15%;
 }
 
 #watchlist-placeholder {
     padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     margin-top: 15%;
     align-items: center;
+    margin-left: 2%;
 }
 
 #poster {
@@ -214,7 +215,6 @@ button:hover {
     gap: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 
@@ -268,11 +268,10 @@ button:hover {
 
 }
 
-/* #star,
-.rating {
-    align-self: center;
-    margin-bottom: 8%;
-} */
+ #star{
+    margin-top: 2%;
+ }
+
 #description, .plot {
     padding: 20px;
     color: grey;
@@ -293,11 +292,16 @@ button:hover {
     display: flex;
 }
 .movie-box{
+    /* margin-left: -30%; */
     display: flex;
     color: white;
-    width: 90%;
-    /* padding: 10px; */
+    width: 100%;
+    height: 35%;
+    padding: 10px;
     gap: 20px;
+    /* border: red 2px dashed; */
+    width: fit-content;
+    height: fit-content;
 }
 .movie-box img{
     width: 15rem;
@@ -306,11 +310,13 @@ button:hover {
     border-radius: 20px;
 }
 
+
+
 .other-details{
     display: flex;
     gap: 20px;
+    margin-left: 60px;
     margin-right: 70%;
-    vertical-align: middle;
 }
 
 .first-group {
@@ -319,12 +325,16 @@ button:hover {
     justify-content: space-between; 
     gap: 10px; 
     padding: 10px;
-    margin-right: 55%;
+    margin-right: 70%;
+}
+
+.watchlist-title{
+    display: flex;
 }
 
 /* Optional styles for individual elements for better layout */
 .watchlist-title {
-    flex: 1; /* Allow the title to take up available space */
+    flex: 1; /*Allow the title to take up available space*/
     font-weight: bold;
     margin: 0;
 }
@@ -341,17 +351,52 @@ button:hover {
 
 .watchlist-watchlist {
     font-size: 14px;
-    font-style: italic;
-    color: #888;
+    color: white;
 }
 
 .remove {
     background-color: white;
     color:black;
     border: none;
-    padding: 5px 10px;
     border-radius: 100%;
     font-weight: bold;
 }
 
 
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    #movie-placeholder {
+        margin-left: 15%;
+    }
+
+    #watchlist-placeholder {
+        margin-top: 28%;
+    }
+
+    #watchlist-body {
+        overflow-x: hidden;
+    }
+
+    .movie-details {
+        margin-left: 10%;
+    }
+
+    .other-details {
+        display: flex;
+        margin-left: -80%;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+
+    .plot-div {
+        margin-right: 50%;
+        display: block;
+        width: 100%;
+    }
+
+    .plot {
+        display: block;
+        width: 100%;
+        text-align: justify;
+    }
+}
