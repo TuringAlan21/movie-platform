@@ -221,16 +221,22 @@ button:hover {
     align-items: center;
     width: fit-content;
     height: fit-content;
+    margin-top: 2.5%;
 
 }
-.add{
-    margin-top: 2.5%;
-}
-/* .remove, #watchlist-watchlist, .star, .rating {
+
+/* .remove,  {
     margin-top: 10%;
 } */
 
+.star, .rating{
+    margin-top: -2%;
+}
 
+
+.watchlist-watchlist{
+    margin-top: 5%;
+}
 #text-group-one,
 #text-group-two {
     display: flex;
@@ -347,11 +353,14 @@ button:hover {
 }
 
 .remove {
+    margin-top: 4.5%;
     background-color: white;
     color:black;
     border: none;
     border-radius: 100%;
     font-weight: bold;
+    width: fit-content;
+    height: fit-content;
 }
 
 
@@ -375,7 +384,7 @@ button:hover {
 
     .other-details {
         display: flex;
-        margin-left: -80%;
+        margin-left: -30%;
         flex-wrap: wrap;
         margin-right: 0;
     }
