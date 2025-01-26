@@ -27,12 +27,12 @@ function renderWatchlist(watchlist) {
         <h2 class="watchlist-title">${movie.title || 'No title available'}</h2>
         <p class="rating">${movie.rating || 'No rating available'}</p>
         <p class="star">⭐</p>
-        <p class="watchlist-watchlist">Watchlist</p>
-        <button class="remove">-</button>
         </div>
         <div class="other-details">
         <p class="duration">${movie.duration || 'No duration available' }</p>
         <p class="genre">${movie.genre || 'No genre available'}</p>
+        <p class="watchlist-watchlist">Watchlist</p>
+        <button class="remove">-</button>
         </div>
         <div class="plot-div">
         <p class="plot">${movie.plot || 'No description available'}</p>
